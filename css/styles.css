@@ -530,9 +530,9 @@ a.checkout__button:focus {
 .checkout__order {
     overflow: hidden;
     /* min-width: 320px; */
-    max-width: 700px;
+    max-width: 900px;
     width: 95vw;
-    height: 60vh;
+    height: 75vh;
     text-align: right;
     pointer-events: none;
 }
@@ -612,6 +612,7 @@ a.checkout__button:focus {
     line-height: 1.5;
     /* overflow-y: scroll; */
     /* height: 247px!important; */
+    margin-bottom: 75px;
 }
 
 .checkout__summary tr {
@@ -823,7 +824,7 @@ th {
 
 h4.card-title {
     font-size: 2.6em;
-    min-height: 60px;
+    min-height: 90px;
 }
 
 h6.price {
@@ -973,18 +974,31 @@ p.card-text {
         margin: 0px!important;
         line-height: 20px;
     }
-
-/*esconter linhas sem conteudo*/
+    /*esconter linhas sem conteudo*/
     table.checkout__summary tbody tr:empty {
-    display:none;
-}
-
-/*corrigir barra de rolagem*/
-.checkout.checkout--active > div > .checkout__order-inner {
-    overflow-y: auto;
-    height: 455px;
-}
-
+        display: none;
+    }
+    /*corrigir barra de rolagem*/
+    .checkout.checkout--active>div>.checkout__order-inner {
+        overflow-y: auto;
+        height: 100%;
+    }
+    .preco-parcelado {
+        bottom: 90px;
+        position: absolute;
+        text-align: center;
+        color: white;
+        width: 100%;
+        font-size: 3em;
+    }
+    .preco-parcelado-valor {
+        display: block;
+        background: #5cb85c;
+        border-radius: 4px;
+        width: 80%;
+        margin: 0 auto;
+        color: #fefefe;
+    }
     @keyframes fade {
         from {
             opacity: 1;
