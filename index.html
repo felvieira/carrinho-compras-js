@@ -595,12 +595,14 @@
                         </div>
 
                     </div>
-                    <div class="preco-parcelado">
+                    <div class="preco-parcelado" style="display:none;">
                         <div class="preco-parcelado-texto">
-
+                            <small class="center">Valor referente ao 1 ano de uso</small>
                         </div>
                         <div class="preco-parcelado-valor">
-
+                        </div>
+                        <div class="preco-parcelado-valor-apos-1ano">
+                            <small class="center">Após o 1 ano de uso, mensalidades a partir de R$ 130,00</small>
                         </div>
                     </div>
                 </div>
@@ -988,10 +990,12 @@
             if (qtd >= 1) {
                 $('tr.desconto-progressivo').show();
                 $('tr.valor-total').show();
+                $('.preco-parcelado').show();
                 // $('tr.desconto-cupom').show();
             } else {
                 $('tr.desconto-progressivo').hide();
                 $('tr.valor-total').hide();
+                $('.preco-parcelado').hide();
                 // $('tr.desconto-cupom').hide();
             }
 

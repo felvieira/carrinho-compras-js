@@ -999,6 +999,17 @@ p.card-text {
         margin: 0 auto;
         color: #fefefe;
     }
+
+    .preco-parcelado-texto > small, .preco-parcelado-valor-apos-1ano > small {
+    color: white;
+    font-size: .5em;
+    width: 90%;
+    display: block;
+    color: #4ab7ff;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
     @keyframes fade {
         from {
             opacity: 1;
