@@ -157,7 +157,7 @@
                             <article class="card animated fadeInLeft">
                                 <img class="card-img-top img-responsive" src="img/img-01.png" alt="Deer in nature" />
                                 <div class="card-block">
-                                    <h4 class="card-title">Módulo Fluxo de caixa </h4>
+                                    <h4 class="card-title">Módulo Fluxo de caixa</h4>
                                     <h6 class="price text-muted">R$ 299,90</h6>
                                     <p class="card-text">Sem dores de cabeça e com exatidão. Discriminado por forma de recebimento e operador</p>
                                     <a href="###" class="btn btn-primary add-to-cart" data-categoria="Módulos">Adicionar ao carrinho</a>
@@ -800,7 +800,7 @@
                 // Checar se os item clicado nao pertence a uma categoria que pode acrescentar mais de um item
                 if ((filterTipoFinal == 'filter-app') || (filterTipoFinal == 'filter-sites')) {
                     if ($.inArray(filterTipoFinal, produtosCarrinho) > -1) {
-                        return filtro = true;
+                        filtro = true;
                     }
                     // se nao for de nenhuma categoria proibida checar se ja esta adicionado ou nao no carrinho
                 } else {
@@ -817,9 +817,11 @@
                             // console.log(nomeProdutosCarrinho[key]);
                             // console.log(tituloFinal);
                             if ($.inArray(tituloFinal, nomeProdutosCarrinho) > -1) {
-                                return filtro = true, jaAdcionado = true;
+                                filtro = true;
+                                jaAdcionado = true;
                             } else {
-                                return filtro = false, jaAdcionado = false;
+                                filtro = false;
+                                jaAdcionado = false;
                             }
 
                         });
@@ -982,7 +984,7 @@
             var qtd = 0;
             $('td.qtd').each(function () {
                 var qtdval = $(this).text();
-                qtd = qtd += parseFloat(qtdval);
+                qtd += parseFloat(qtdval);
                 return qtd;
             });
 
@@ -1028,7 +1030,7 @@
                     var descontoAcumulativo = (descontoAcumulativo / 100).toFixed(2);
                     // console.log('Porcentagem de desconto é: ' + descontoAcumulativo * 100 + '%');
 
-                    sum = sum += parseFloat(valFinal);
+                    sum += parseFloat(valFinal);
                     // console.log('Soma dos produtos é: ' + sum);
 
                     descontoOnly = sum * descontoAcumulativo;
@@ -1042,11 +1044,11 @@
 
                     // console.log('Porcentagem de desconto é: ' + descontoAcumulativo * 100 + '%');
 
-                    return desconto, descontoOnly, descontoAcumulativo;
+                    // return desconto, descontoOnly, descontoAcumulativo;
 
                 } else {
-                    sum = sum += parseFloat(valFinal);
-                    return sum;
+                    sum += parseFloat(valFinal);
+                    // return sum;
                 }
 
             });
